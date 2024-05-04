@@ -43,7 +43,7 @@ def is_leap(ano):
 def run(script):
     script=request.args.get("script", "")
     return (
-	"""<h2> RUN! 🕸 </h2>"""
+	"""<h2> Run! </h2>"""
 	"""<form action="" method="get">
                 <input type="text" name="script">
                 <input type="submit" value="Run">
