@@ -39,6 +39,18 @@ def is_leap(ano):
         resposta = 'Não!'
     return resposta
 
+@app.route("/<string:script>")
+def run(script):
+    script=request.args.get("script", "")
+    return (
+	"""<h2> Run! 🕸 </h2>"""
+	"""<form action="" method="get">
+                <input type="text" name="script">
+                <input type="submit" value="Run">
+            </form>"""
+    + '<a id="script">' + script + '</a>'
+) 
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080, debug=True)
